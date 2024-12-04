@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background: #ffffff;
+  --dark-background: #111111;
+}
+
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background: var(--dark-background);
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: var(--background);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Date Picker Custom Styles */
+.react-datepicker {
+  @apply bg-white dark:bg-[#111111] border border-gray-200 dark:border-gray-800 rounded-md shadow-lg font-sans !important;
+}
+
+.react-datepicker__header {
+  @apply bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 rounded-t-md !important;
+}
+
+.react-datepicker__current-month {
+  @apply text-gray-900 dark:text-white font-semibold !important;
+}
+
+.react-datepicker__day-name {
+  @apply text-gray-600 dark:text-gray-400 !important;
+}
+
+.react-datepicker__day {
+  @apply text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-sm transition-colors !important;
+}
+
+.react-datepicker__day--selected {
+  @apply bg-black dark:bg-white text-white dark:text-black hover:bg-black/90 dark:hover:bg-white/90 !important;
+}
+
+.react-datepicker__day--keyboard-selected {
+  @apply bg-black/10 dark:bg-white/10 text-black dark:text-white hover:bg-black/20 dark:hover:bg-white/20 !important;
+}
+
+.react-datepicker__day--in-range {
+  @apply bg-black/5 dark:bg-white/5 text-black dark:text-white !important;
+}
+
+.react-datepicker__day--in-selecting-range {
+  @apply bg-black/10 dark:bg-white/10 !important;
+}
+
+.react-datepicker__day--disabled {
+  @apply text-gray-400 dark:text-gray-600 hover:bg-transparent cursor-not-allowed !important;
+}
+
+.react-datepicker__navigation {
+  @apply top-3 !important;
+}
+
+.react-datepicker__navigation-icon::before {
+  @apply border-gray-400 dark:border-gray-500 !important;
+}
+
+.react-datepicker__input-container input {
+  @apply w-full px-3 py-2 bg-white dark:bg-[#111111] border border-gray-200 dark:border-gray-800 rounded-md text-sm text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent transition-colors !important;
+}
+
+/* Utility Classes */
+.btn-primary {
+  @apply bg-black dark:bg-white text-white dark:text-black hover:bg-black/90 dark:hover:bg-white/90 transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors;
+}
+
+.card {
+  @apply bg-white dark:bg-[#111111] border border-gray-200 dark:border-gray-800 rounded-md;
+}
+
+.input {
+  @apply bg-white dark:bg-[#111111] border border-gray-200 dark:border-gray-800 rounded-md text-gray-900 dark:text-white focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent transition-colors;
+}
